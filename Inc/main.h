@@ -10,7 +10,7 @@
   * inserted by the user or by software development tools
   * are owned by their respective copyright owners.
   *
-  * COPYRIGHT(c) 2022 STMicroelectronics
+  * COPYRIGHT(c) 2023 STMicroelectronics
   *
   * Redistribution and use in source and binary forms, with or without modification,
   * are permitted provided that the following conditions are met:
@@ -44,11 +44,28 @@
 /* Includes ------------------------------------------------------------------*/
 
 /* USER CODE BEGIN Includes */
-
+#include "stm32f4xx.h"
+#include "string.h"
+#include "stdio.h"
+#include "stdbool.h"
 /* USER CODE END Includes */
 
 /* Private define ------------------------------------------------------------*/
 
+#define LCD_E_Pin GPIO_PIN_3
+#define LCD_E_GPIO_Port GPIOE
+#define LCD_RW_Pin GPIO_PIN_2
+#define LCD_RW_GPIO_Port GPIOF
+#define LCD_RS_Pin GPIO_PIN_3
+#define LCD_RS_GPIO_Port GPIOF
+#define LCD_D4_Pin GPIO_PIN_4
+#define LCD_D4_GPIO_Port GPIOF
+#define LCD_D5_Pin GPIO_PIN_5
+#define LCD_D5_GPIO_Port GPIOF
+#define LCD_D6_Pin GPIO_PIN_6
+#define LCD_D6_GPIO_Port GPIOF
+#define LCD_D7_Pin GPIO_PIN_7
+#define LCD_D7_GPIO_Port GPIOF
 #define LED_Pin GPIO_PIN_3
 #define LED_GPIO_Port GPIOA
 
@@ -60,7 +77,8 @@
 /* #define USE_FULL_ASSERT    1U */
 
 /* USER CODE BEGIN Private defines */
-
+#define ON					GPIO_PIN_SET
+#define OFF					GPIO_PIN_RESET
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

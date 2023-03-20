@@ -1,5 +1,6 @@
 --cpu=Cortex-M4.fp.sp
 "blink_led\startup_stm32f407xx.o"
+"blink_led\eas_lcd.o"
 "blink_led\main.o"
 "blink_led\stm32f4xx_it.o"
 "blink_led\stm32f4xx_hal_msp.o"
